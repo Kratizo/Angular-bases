@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DbzComponent } from './page/main-page.component';
+import { mainPageComponent } from './page/main-page.component';
 import { ListComponent } from './components/list/list.component';
 import { AddCharacterComponent } from './components/add-character/add-character.component';
 
@@ -9,12 +9,12 @@ import { AddCharacterComponent } from './components/add-character/add-character.
 
 @NgModule({
   declarations: [
-    DbzComponent,
+    mainPageComponent,
     ListComponent,
     AddCharacterComponent
   ],
   exports: [
-   DbzComponent,
+   mainPageComponent,
 
   ],
   imports: [
