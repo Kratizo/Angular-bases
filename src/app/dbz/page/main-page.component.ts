@@ -19,7 +19,7 @@ export class mainPageComponent {
       power: 9500
     },{
       name: 'Vegeta',
-      power: 111
+      power: 7500
     }
   ];
 
