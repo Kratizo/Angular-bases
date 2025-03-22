@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output, output } from '@angular/core';
 import { Character } from '../../interface/character.interface';
 import { JsonPipe } from '@angular/common';
 
@@ -10,10 +10,24 @@ import { JsonPipe } from '@angular/common';
 })
 export class AddCharacterComponent {
 
+  @Output()
+  public onNewCharacter: EventEmitter<Character> = new EventEmitter();
+
   public Character: Character = {
     name: '',
     power: 0,
 
+  }
+
+  emitCharacter () {
+    console.log(this.Character)
+
+    if(this.Character.name.length === 0) return
+
+    this.onNewCharacter.emit(this.Character)
+
+    this.Character.name;
+    this.Character.power
   }
 
 
